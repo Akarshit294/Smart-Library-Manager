@@ -33,7 +33,7 @@ A Library Manager using Python, Flask, MySQL, HTML, CSS, JavaScript, Bootstrap a
 ## User Details
 ![Image](https://github.com/user-attachments/assets/3c97715d-0e9c-450d-bcd7-c3bc90b91859)
 
-## Login and Registration pages
+## Login & Registration pages
 ![Image](https://github.com/user-attachments/assets/af3c0ecf-7907-4a3f-9fc3-aea98d629bef)
 
 Hope you like it. Let me know if you have any suggestions/improvements.

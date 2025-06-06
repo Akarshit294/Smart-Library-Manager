@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<br><br><br>
+<div class="card mt-5" style="padding: 50px; margin-left: 5%; margin-right: 5%; background-color: #effee1; box-shadow: 0 24px 40px rgba(0, 0, 0, 0.2);">
+  <div class="row">
+    <!-- Profile Picture -->
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='img/avatar4.png') }}" alt="Profile Image" class="img-fluid " 
+       style="width: 260px; height: 260px; object-fit: cover; margin-top: 32px;">
+    </div>
+    
+    <!-- User Information -->
+    <div class="col-md-8">
+      <h3 style="font-size: 50px;">User Profile</h3><hr>
+      <table class="table table-borderless" style="font-size: 20px;">
+        <tr>
+          <th>ID:</th>
+          <td>{{ user.id }}</td>
+        </tr>
+        <tr>
+          <th>Name:</th>
+          <td>{{ user.name }}</td>
+        </tr>
+        <tr>
+          <th>Email:</th>
+          <td>{{ user.email }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div style="display: flex; justify-content: flex-end; gap: 10px;">
+    <a href="{{ url_for('edit_user', id=user.id) }}" class="btn btn-primary">Edit</a>
+    <a href="{{ url_for('delete_user', id=user.id) }}" class="btn btn-danger">Delete</a>
+  </div>
+</div>
+{% endblock %}

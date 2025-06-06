@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Library Manager - Cover</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Style -->
+    <style>
+    .top-left-logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        gap: 8px; /* space between icon and text */
+        font-family: 'Segoe UI', sans-serif;
+        font-weight: bold;
+    }
+
+    .top-left-logo i {
+        font-size: 28px;
+    }
+
+    .nav-link{
+        color: white;
+    }
+
+    .nav-link:hover {
+        color: #4193e5; /* Lighter shade on hover */
+    }
+
+    </style>
+
+  </head>
+  <body class="d-flex h-100 text-center text-bg-dark" style="background-image: url('../static/img/bg.png'); background-size: cover;">
+
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="mb-auto">
+        <div>
+          <!-- Icon and Text -->
+            <div class="top-left-logo">
+            <i class="fa-solid fa-book"></i>
+            <span>Smart Library Manager</span>
+            </div>
+
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link fw-bold py-1 px-0" href="{{ url_for('login') }}">Login</a>
+            <a class="nav-link fw-bold py-1 px-4" href="{{ url_for('register') }}">Register</a>
+            <a class="nav-link fw-bold py-1 px-0" href="{{ url_for('contact') }}">Contact Me</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="px-3">
+        <h1>Welcome to</h1> 
+        <h1 style="font-size: 45px;">Smart Library Manager</h1><br>
+        <p class="lead">A simple, secure, and elegant system to manage your personal or institutional library.</p><br>
+        <p class="lead">
+          <a href="{{ url_for('login') }}" class="btn btn-lg btn-light fw-bold border-white bg-white">Go to Dashboard</a>
+        </p>
+      </main>
+
+      <footer class="mt-auto text-white-50">
+        <p>© 2025 Smart Library Manager | Developed by Akarshit</p>
+      </footer>
+    </div>
+
+  </body>
+</html>

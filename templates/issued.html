@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <!-- Content Header (Page header) -->
+    <h1 class="m-3">Issued Books</h1><br>
+    
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+            <h3 class="m-0">&nbsp; Details</h3>
+            <br>
+            <br><br>            
+            <table class="table table-striped">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Book Name</th>
+                <th>ISBN Code</th>
+                <th>Member Id</th>
+                <th>Member Name</th>
+                <th>Return Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for detail in details %}           
+                    <tr>
+                      <td><a href="{{url_for('return_book', bookid=detail.bookid)}}" class="btn btn-primary" class="btn btn-primary">Return</a></td>
+                      <td>{{detail.name}}</td>
+                      <td>{{detail.isbn}}</td>            
+                      <td>{{detail.member_id}}</td>  
+                      <td>{{detail.member_name}}</td>
+                      <td>{{detail.return_date}}</td>
+                    </tr> 
+              {% endfor %}   
+              </tbody>
+          </table>    
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    
+{% endblock %}
